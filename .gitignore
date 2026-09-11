@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pixi/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+# Local corpus, cached models, indexes, annotations, and generated results
+/data/
+/models/
+*.pdf
+*.sqlite*

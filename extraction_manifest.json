@@ -1,0 +1,314 @@
+{
+  "source_project": "Epistasis_predictor",
+  "description": "Source hashes before extraction edits. Only RAG and its transitive support modules and tests are copied; corpus and research outputs are excluded.",
+  "files": [
+    {
+      "path": "pipeline/config.py",
+      "source_sha256": "c54d28a39865388f2fbe744eb563a0fcb3adda99076358ea2c083fca752b6478"
+    },
+    {
+      "path": "pipeline/steps/archive_task11_v5.py",
+      "source_sha256": "543262d49f8fc583100ad948a3d66a1ce6b9b19425cf84460e0035bdfe379f5e"
+    },
+    {
+      "path": "pipeline/steps/archive_task11e_v4.py",
+      "source_sha256": "95dcfb8939a61fb95db499a2554cbdc4a73d600567725f084af2cf4d65ba1f6c"
+    },
+    {
+      "path": "pipeline/steps/audit_task11_failures.py",
+      "source_sha256": "f9875604d20476d942685239f9c602de5cb311c1d325cec0f95b294aae4b3850"
+    },
+    {
+      "path": "pipeline/steps/audit_task11e_v5.py",
+      "source_sha256": "c84797c8392b23678b9a5a25eaea504c0f814dc4cd1fc9cdbbc8e9debe78057b"
+    },
+    {
+      "path": "pipeline/steps/audit_task11f2_v6.py",
+      "source_sha256": "559c38d905a9af978c4d909a6ba3b9568908203b5a8d3bc999eb0782c2aacf10"
+    },
+    {
+      "path": "pipeline/steps/build_literature_layers.py",
+      "source_sha256": "74f5a676d2ee81e9489a0fdfeab37efd55b3ef1ba3136562b5ff10078220908b"
+    },
+    {
+      "path": "pipeline/steps/build_rag_benchmark.py",
+      "source_sha256": "1a67e955e9c4d83fe1f4f73d3370f4b9e76c46b6e6dff0e4ea5461d388739c22"
+    },
+    {
+      "path": "pipeline/steps/build_rag_index.py",
+      "source_sha256": "7c1b230aef76a1a80288a96718c16feb7aa1c4bf0323117fab5469a6802ba84e"
+    },
+    {
+      "path": "pipeline/steps/build_task11_confirmatory_benchmark.py",
+      "source_sha256": "9bbe1765ab346d77f406b2feaccacc1222c5102c1b756c12e5ea79662c671628"
+    },
+    {
+      "path": "pipeline/steps/build_task11_stack_manifest.py",
+      "source_sha256": "4ca3f4506c02b8c854a18425af315e740405dc377eb076f7705c05728f228749"
+    },
+    {
+      "path": "pipeline/steps/build_task11_v6_confirmatory.py",
+      "source_sha256": "970886c1e29d8d5aa4d9b61d9809a745455603917df5b47d5ccefaff78f8ce11"
+    },
+    {
+      "path": "pipeline/steps/build_task11_v7_confirmatory.py",
+      "source_sha256": "77e6a43e3177c830c0a2f90eba7edb1b4982978678291498617f111ab8f07139"
+    },
+    {
+      "path": "pipeline/steps/build_task11e_development_table.py",
+      "source_sha256": "94bf36b5fd1f45c4b0a6d8456a9c164f4a3b70616bb86a6cbb2658cc501d2fe1"
+    },
+    {
+      "path": "pipeline/steps/build_task11f3_abstention_pool.py",
+      "source_sha256": "1f98fa5e1940eb59e998b2b155f6b88cd8be432ad808e07242aa2f40ba065795"
+    },
+    {
+      "path": "pipeline/steps/download_literature.py",
+      "source_sha256": "ac6ad9fcad039ad3baa91af61f5ff58029e41c22ebeb4ed2e4627f735922f3be"
+    },
+    {
+      "path": "pipeline/steps/download_pubmed_abstracts.py",
+      "source_sha256": "18311896f6f29e9192c2311d78297fe4eb3fbb6afcfc5aa5ff90a69c7b4da4cb"
+    },
+    {
+      "path": "pipeline/steps/dry_run_task11f3_finalizer.py",
+      "source_sha256": "3504124d43696d404b3725c4a02773c0970722024b190d339c71343a9964ebff"
+    },
+    {
+      "path": "pipeline/steps/enrich_literature_metadata.py",
+      "source_sha256": "be731681acd201fb22aa995aa87e1a7b944fa53b538e57710011efd482802ad6"
+    },
+    {
+      "path": "pipeline/steps/finalize_task11_rag.py",
+      "source_sha256": "52d4e3ac45f99708c5f6dc76bb2ac6135f478e4972b04ea2461ca67738834128"
+    },
+    {
+      "path": "pipeline/steps/finalize_task11_v5.py",
+      "source_sha256": "361a4459d9aed84db2482232a25ba249faa4285adf41f83cf8cb4aaab044023a"
+    },
+    {
+      "path": "pipeline/steps/finalize_task11_v6.py",
+      "source_sha256": "b86ae1f5a17347839eed7a78b7e57bfc3611d1ca7a6b1aa56f763dc81c163db0"
+    },
+    {
+      "path": "pipeline/steps/finalize_task11_v7.py",
+      "source_sha256": "171417222ece8b9a7636e29b321170f60c3e51e8293672152f877836949b045a"
+    },
+    {
+      "path": "pipeline/steps/freeze_task11_annotations.py",
+      "source_sha256": "c0af18e73182dcc781dbb8590a8b94b25610e8398a65a1cc4ff87012c3e3cb80"
+    },
+    {
+      "path": "pipeline/steps/preflight_task11_v6.py",
+      "source_sha256": "6be6c3d2cdeb6615c1d40e441c07f43eb27b4e70954931aeca6804d71719730f"
+    },
+    {
+      "path": "pipeline/steps/preflight_task11_v7.py",
+      "source_sha256": "70a215bc442e5b0397d01a2793450fc608296e890b56b7dc18c7b6045cebc7e0"
+    },
+    {
+      "path": "pipeline/steps/prepare_literature_corpus.py",
+      "source_sha256": "4f1cff4b634265d7ae735b84d80268d8bf55c8ddb115874d694957ce077a13f4"
+    },
+    {
+      "path": "pipeline/steps/prepare_task11_rag.py",
+      "source_sha256": "c7b2f9dd824e36899ea7b32920b51998501081eea1ff574e308c1e1c22590bd7"
+    },
+    {
+      "path": "pipeline/steps/promote_task11_rag.py",
+      "source_sha256": "43ef3da9f1640f96a7e2e3dc0e8010e895c79da41ac41865a2e7f90877a6576b"
+    },
+    {
+      "path": "pipeline/steps/provisionalize_task11_rag.py",
+      "source_sha256": "01526b1404f2f807ef9f41496698c379e00877fbd1d0902370f6da9766fb2574"
+    },
+    {
+      "path": "pipeline/steps/reemit_task11_v6_caches.py",
+      "source_sha256": "8a3f39e34babebef65f61eddebe95e62d4da6559a49eb543cef2f20492028bb4"
+    },
+    {
+      "path": "pipeline/steps/retire_task11_confirmatory.py",
+      "source_sha256": "1308390c2b6fc98cca3d3059886632b6ef0bd46bd5437ea121e6c77653303c99"
+    },
+    {
+      "path": "pipeline/steps/retire_task11_v5.py",
+      "source_sha256": "92925154ce952e14eebf4a38b5232faa2f689600e81c5e932af4c9358c537632"
+    },
+    {
+      "path": "pipeline/steps/retire_task11_v6.py",
+      "source_sha256": "a7f6c1106dc8cecb90c6f3b3269cbdac765139abeb0717e1db5c4f0a4d2f9a42"
+    },
+    {
+      "path": "pipeline/steps/run_literature_reranking.py",
+      "source_sha256": "968d01dd92c33fa62a6f38eb23cf22f46356f65abb1b937724fec57b24d20629"
+    },
+    {
+      "path": "src/data/pdf_downloader.py",
+      "source_sha256": "20cd633743bfce714e7e67cc20f0232141243fb606967ed8eb4bb44db7fbc82e"
+    },
+    {
+      "path": "src/data/pubmed_abstracts.py",
+      "source_sha256": "653fa11da19fbbd8f5acd091233e35d8bfabd37087c9ec33d4ad258f623656bb"
+    },
+    {
+      "path": "src/features/discovery_hypotheses.py",
+      "source_sha256": "2d3f3a6e5c5758193f802f3473e58d3630c37307f83a8401578430800d827d79"
+    },
+    {
+      "path": "src/features/physicochemical.py",
+      "source_sha256": "b36972e448275c3db7a72561170e4536d470d3f1e80fd2b95dfafc4c225a4f84"
+    },
+    {
+      "path": "src/literature/__init__.py",
+      "source_sha256": "23e67f854c036606083cd9ab2142de1ab6fe8b077553a2934002855537f17d9d"
+    },
+    {
+      "path": "src/literature/benchmark.py",
+      "source_sha256": "654310e83f613d434fbd57aa34d14c8ba50265bf614432853c63acd87904d74a"
+    },
+    {
+      "path": "src/literature/corpus_layers.py",
+      "source_sha256": "40a7b7d672d9aefa14e3d4843a684a1b1ed9157b11ee6d4c7cc48155567cf5e0"
+    },
+    {
+      "path": "src/literature/evidence_grade.py",
+      "source_sha256": "3145299ec3c3785113c5eef482b0c72c7f3cce1855180d8303225672c882f9f0"
+    },
+    {
+      "path": "src/literature/pubmed_records.py",
+      "source_sha256": "50e01d6d258061fb81054038dca899c01d84d610680da91e37bef548b2cefa21"
+    },
+    {
+      "path": "src/literature/task11.py",
+      "source_sha256": "03d94ffbd632d9d7aaf7839296b370847d4185b5da99b733822fbdf0ff9ddcd8"
+    },
+    {
+      "path": "src/literature/task11_annotations.py",
+      "source_sha256": "60c989e9809e43f8f0d2b5f1d59aad69e82a1290b0319a564c2a9c0d234962e0"
+    },
+    {
+      "path": "src/literature/task11_audit.py",
+      "source_sha256": "a43f3f57a2f9b5e96a1b03535b389f96710730738c070aa72bdc0c76fce968d4"
+    },
+    {
+      "path": "src/literature/task11e.py",
+      "source_sha256": "797b1d75c3f7294c82aac29678bb0617d0ee1095ddeb4f4c347ae8408ea48cfc"
+    },
+    {
+      "path": "src/literature/task11e_control.py",
+      "source_sha256": "959a6074c0755964be400826780fd641106f27ee7aada723462e7dae70eb7b83"
+    },
+    {
+      "path": "src/literature/task11f.py",
+      "source_sha256": "a2b8d7c69113d67983de9057ec22d9425f27dd9b2148322f97b81b65247b0a56"
+    },
+    {
+      "path": "src/literature/task11f2.py",
+      "source_sha256": "179551edd7031dbba802afe13ee6b3fb5ebc68f1f3a510fedb2996cb0fbf43c5"
+    },
+    {
+      "path": "src/model/evidence_priority.py",
+      "source_sha256": "0276b48f6f18200519d199e30d1706430a9f69e94e6f18ebd8210c5986c46197"
+    },
+    {
+      "path": "src/model/mechanistic_hypothesis.py",
+      "source_sha256": "9c9a870518391b6815c701d15b70e8dfddd910bee3036e7b972b289e938fecfa"
+    },
+    {
+      "path": "src/rag/__init__.py",
+      "source_sha256": "632066d7f100102d259041f79dd1e0c17449c2243246630605dbd48303c03957"
+    },
+    {
+      "path": "src/rag/bm25_index.py",
+      "source_sha256": "2e4ae8b146f8d33142fe4773d73652859fee5033c57ce457327f76fb97a24f0e"
+    },
+    {
+      "path": "src/rag/chain.py",
+      "source_sha256": "2fab0588f95e63576cebcb6d547d3783d377f140b20ef75d10684d7e9d678a32"
+    },
+    {
+      "path": "src/rag/document_retrieval.py",
+      "source_sha256": "a6b7a342e450a3e642f517be5b1e47522704ff7c4a961ae6c3494d2377c4d9cb"
+    },
+    {
+      "path": "src/rag/embedder.py",
+      "source_sha256": "0ab2bcd303b4b9aa1c414bf74aceb59a26715234efb18891381263460b9016e3"
+    },
+    {
+      "path": "src/rag/ingestor.py",
+      "source_sha256": "fe4592bc695464e97a9708c81e05366b467266585af4f078262b31e41294a53f"
+    },
+    {
+      "path": "src/rag/llm.py",
+      "source_sha256": "7fbfdf0bab0f1ca99b3e75472cb4098c4013986d24647fdc18badc7c38a827ff"
+    },
+    {
+      "path": "src/rag/prompts.py",
+      "source_sha256": "034ba4367355c236f5b83ef331b2b6b3f7c1cf0b4f12eb78a687ccf392d9b4f7"
+    },
+    {
+      "path": "src/rag/query_profiles.py",
+      "source_sha256": "fdf982b5ec11cfca79afee692efd07d87696fe32d8e8d6d11f33d7fc8ede5cda"
+    },
+    {
+      "path": "src/rag/reranker.py",
+      "source_sha256": "7427d8db7be2b35453c213c77e830c169fb1bc4b5c7ea61bd3ab4bd8725c7619"
+    },
+    {
+      "path": "src/rag/retrieval_v5.py",
+      "source_sha256": "acdec9cb5ba178b68a740d594f197ac1468aff2d956fc60c02737ef80e2db9c7"
+    },
+    {
+      "path": "src/rag/schemas.py",
+      "source_sha256": "5256dfb7d31f71cdaccf3f314ddeefc6ee8ba6a8fb5a57e2314470777191fc4b"
+    },
+    {
+      "path": "src/rag/variant_mentions.py",
+      "source_sha256": "064ce419a82a236098733aa21c32e3886543ed343a2987aeb07f4fc0983be552"
+    },
+    {
+      "path": "src/rag/vector_store.py",
+      "source_sha256": "9cf317b149623bb74a21c25386821f17dad87e3e49c3f3934369b953445f510f"
+    },
+    {
+      "path": "tests/test_bm25_index.py",
+      "source_sha256": "1e07ae4122ffd6fc01c9ebfd52b53b417419e1cf894eddd0337bad635efa9b74"
+    },
+    {
+      "path": "tests/test_corpus_layers.py",
+      "source_sha256": "6ad0e99bc94a1925d83c021cdfca8bc27554552c6143c26bf35cbc02c6418a58"
+    },
+    {
+      "path": "tests/test_discovery_hypotheses.py",
+      "source_sha256": "b9a3261baf4d168a32478283ec7042ff1efd1e9700e6410f009245a1e7df62b5"
+    },
+    {
+      "path": "tests/test_document_retrieval.py",
+      "source_sha256": "fb456f86b39c2ff2984ff3b63acce9ad817b210b1c7a765dd0223ff8f2625822"
+    },
+    {
+      "path": "tests/test_evidence_grade.py",
+      "source_sha256": "6c767ee36320ea6054d0ff420bf199c7dbd6a4036f9a8a38d67f688e168c38e3"
+    },
+    {
+      "path": "tests/test_evidence_priority.py",
+      "source_sha256": "fa44d8c84fe3427c02bd3c5836868823746c7e4e89f4cb35a8330379f946714f"
+    },
+    {
+      "path": "tests/test_rag_benchmark.py",
+      "source_sha256": "93dcb4585a7c510aca9ef83a6839dbebe2b9d98bfdebbb596d050a485bc6d8af"
+    },
+    {
+      "path": "tests/test_rag_contract.py",
+      "source_sha256": "263cde5ec1311b6a0cfc46291d11616fc5f94910edce752963b1645d29eb7363"
+    },
+    {
+      "path": "tests/test_rag_layer_separation.py",
+      "source_sha256": "581c4eb6a4e272f3e5d79aae07c88ddf71b39723b735635aecd41a21f2991695"
+    },
+    {
+      "path": "tests/test_task11_rag.py",
+      "source_sha256": "25aec4a76a2b437b8a4780e9861778a6c87b51b1d06a35c7f52323965a411460"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rag-for-variant-analysis"
+version = "0.1.0"
+description = "Traceable literature retrieval and mechanistic annotation of protein variants"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<3",
+    "pyarrow>=17,<24",
+    "requests>=2.32,<3",
+    "pydantic>=2.8,<3",
+    "torch>=2.3,<3",
+    "transformers>=4.44,<5",
+    "langchain-core>=1.1,<2",
+    "langchain-text-splitters>=1,<2",
+    "langchain-ollama>=1.0,<2",
+    "langchain-qdrant>=1.0,<2",
+    "qdrant-client>=1.11,<2",
+    "rank-bm25>=0.2.2,<0.3",
+    "lxml>=6.1.1,<7",
+    "matplotlib>=3.8,<4",
+    "seaborn>=0.13,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "pipeline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
