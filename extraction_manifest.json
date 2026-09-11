@@ -87,20 +87,12 @@
       "source_sha256": "361a4459d9aed84db2482232a25ba249faa4285adf41f83cf8cb4aaab044023a"
     },
     {
-      "path": "pipeline/steps/finalize_task11_v6.py",
-      "source_sha256": "b86ae1f5a17347839eed7a78b7e57bfc3611d1ca7a6b1aa56f763dc81c163db0"
-    },
-    {
       "path": "pipeline/steps/finalize_task11_v7.py",
       "source_sha256": "171417222ece8b9a7636e29b321170f60c3e51e8293672152f877836949b045a"
     },
     {
       "path": "pipeline/steps/freeze_task11_annotations.py",
       "source_sha256": "c0af18e73182dcc781dbb8590a8b94b25610e8398a65a1cc4ff87012c3e3cb80"
-    },
-    {
-      "path": "pipeline/steps/preflight_task11_v6.py",
-      "source_sha256": "6be6c3d2cdeb6615c1d40e441c07f43eb27b4e70954931aeca6804d71719730f"
     },
     {
       "path": "pipeline/steps/preflight_task11_v7.py",
@@ -309,6 +301,18 @@
     {
       "path": "tests/test_task11_rag.py",
       "source_sha256": "25aec4a76a2b437b8a4780e9861778a6c87b51b1d06a35c7f52323965a411460"
+    }
+  ],
+  "excluded_obsolete_entrypoints": [
+    {
+      "path": "pipeline/steps/finalize_task11_v6.py",
+      "source_sha256": "b86ae1f5a17347839eed7a78b7e57bfc3611d1ca7a6b1aa56f763dc81c163db0",
+      "reason": "Imports a V6 function removed from the source task11f2 module; use the V7 entrypoint."
+    },
+    {
+      "path": "pipeline/steps/preflight_task11_v6.py",
+      "source_sha256": "6be6c3d2cdeb6615c1d40e441c07f43eb27b4e70954931aeca6804d71719730f",
+      "reason": "Imports a V6 function removed from the source task11f2 module; use the V7 entrypoint."
     }
   ]
 }
