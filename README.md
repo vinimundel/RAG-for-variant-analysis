@@ -58,6 +58,19 @@ encoders. TEIs existentes permitem indexar sem o servidor GROBID. A camada
 `primary_evidence` sustenta inferência mecanística; `context_reference` permanece
 separada e documentos excluídos não entram no índice ativo.
 
+## Análise de uma variante
+
+Após construir o índice, forneça uma consulta JSON explícita. Este modo usa somente
+o RAG e não exige tabela ou execução estrutural:
+
+```bash
+python -m pipeline.steps.analyze_variant --query examples/braf_v600e_query.json --output data/output/BRAF/v600e_analysis.json
+```
+
+O exemplo não declara medições estruturais nem hipóteses biofísicas prévias.
+A saída preserva evidências, citações, separação entre mecanismo e contexto,
+estado do contrato LLM, modo de inferência e fingerprint do manifesto do índice.
+
 ## Integração com tabelas existentes
 
 `pipeline.steps.run_literature_reranking` conserva o fluxo original para tabelas

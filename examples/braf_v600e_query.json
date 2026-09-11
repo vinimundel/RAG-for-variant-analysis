@@ -1,0 +1,13 @@
+{
+  "gene": "BRAF",
+  "variant": "V600E",
+  "position": 600,
+  "functional_region": "kinase domain",
+  "structural_observation": "No structural measurements supplied; literature-only query.",
+  "biophysical_hypotheses_json": "[]",
+  "condition_profile": "braf_oncology",
+  "condition_terms": [],
+  "query_version": "discovery_v5",
+  "pharmacology_requested": false,
+  "k": 10
+}
