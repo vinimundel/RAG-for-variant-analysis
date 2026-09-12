@@ -4,7 +4,12 @@ services:
     ports:
       - "8070:8070"
     init: true
-    restart: unless-stopped
+    restart: "no"
+    mem_limit: 2500m
+    memswap_limit: 2500m
+    cpus: 2
+    environment:
+      JAVA_OPTS: -Xms256m -Xmx1536m
   qdrant:
     image: qdrant/qdrant:v1.15.4
     ports:
@@ -12,4 +17,6 @@ services:
       - "6334:6334"
     volumes:
       - ./data/output/qdrant_server:/qdrant/storage
-    restart: unless-stopped
+    restart: "no"
+    mem_limit: 1g
+    memswap_limit: 1g
