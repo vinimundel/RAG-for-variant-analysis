@@ -1,0 +1,55 @@
+{
+  "collection": "BRAF",
+  "purpose": "Two-paper engineering smoke test, not a representative clinical corpus",
+  "documents": [
+    {
+      "pmid": "24367680",
+      "title": "BRAFV600E mutation analysis in patients with metastatic colorectal cancer (mCRC) in daily clinical practice: correlations with clinical characteristics, and its impact on patients' outcome.",
+      "doi": "10.1371/journal.pone.0084604",
+      "journal": "PloS one",
+      "pmcid": "PMC3867547",
+      "year": 2013,
+      "authors": [
+        "Saridaki, Zacharenia",
+        "Tzardi, Maria",
+        "Sfakianaki, Maria",
+        "Papadaki, Chara",
+        "Voutsina, Alexandra",
+        "Kalykaki, Aristea",
+        "Messaritakis, Ippokratis",
+        "Mpananis, Kyriakos",
+        "Mavroudis, Dimitris",
+        "Stathopoulos, Efstathios",
+        "Georgoulias, Vassilis",
+        "Souglakos, John"
+      ],
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0084604",
+      "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0084604&type=printable",
+      "license": "CC BY; see publisher license statement",
+      "corpus_layer": "primary_evidence"
+    },
+    {
+      "pmid": "24733413",
+      "title": "Targeted BRAF inhibition impacts survival in melanoma patients with high levels of Wnt/β-catenin signaling.",
+      "doi": "10.1371/journal.pone.0094748",
+      "journal": "PloS one",
+      "pmcid": "PMC3986217",
+      "year": 2014,
+      "authors": [
+        "Chien, Andy J",
+        "Haydu, Lauren E",
+        "Biechele, Travis L",
+        "Kulikauskas, Rima M",
+        "Rizos, Helen",
+        "Kefford, Richard F",
+        "Scolyer, Richard A",
+        "Moon, Randall T",
+        "Long, Georgina V"
+      ],
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0094748",
+      "pdf_url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0094748&type=printable",
+      "license": "CC BY; see publisher license statement",
+      "corpus_layer": "primary_evidence"
+    }
+  ]
+}

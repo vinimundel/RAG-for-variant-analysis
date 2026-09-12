@@ -1,0 +1,45 @@
+{
+  "executed_utc": "2026-09-12T13:36:43Z",
+  "scope": "single-case engineering smoke test",
+  "runtime": {
+    "platform": "WSL",
+    "retrieval_device": "cpu",
+    "generation_device": "cpu",
+    "generator": "qwen2.5:1.5b",
+    "ragas_version": "0.4.3"
+  },
+  "index": {
+    "papers": 2,
+    "chunks": 41,
+    "parser": "grobid_tei",
+    "embedding_model": "ncbi/MedCPT-Article-Encoder",
+    "reranker_model": "ncbi/MedCPT-Cross-Encoder"
+  },
+  "question": "In the 504-patient metastatic colorectal cancer study, how was BRAF V600E associated with overall survival?",
+  "result": {
+    "status": "answered",
+    "generation_mode": "extractive_fallback",
+    "source_pmid": "24367680",
+    "evidence_id": "E01",
+    "exact_quote": "Patients with BRAFV600E mutated tumors had a statistically significantly reduced progression-free survival (PFS) compared to wild-type (wt) ones (4.1 and 11.6 months, respectively; p<0.001) and overall survival (OS) (14.0 vs. 34.6 months, respectively; p<0.001).",
+    "timings_ms": {
+      "retrieval": 26868.92,
+      "generation": 22066.57,
+      "total": 48955.5
+    }
+  },
+  "deterministic_metrics": {
+    "expected_source_recall": 1.0,
+    "expected_status_match": 1.0
+  },
+  "ragas": {
+    "judge_model": "qwen2.5:1.5b",
+    "faithfulness": 1.0,
+    "context_recall": 1.0
+  },
+  "limitations": [
+    "The local generator abstained and the application used its declared extractive fallback.",
+    "One case cannot estimate broad biomedical accuracy or clinical quality.",
+    "RAGAS is an LLM-as-a-judge measurement and requires human interpretation."
+  ]
+}

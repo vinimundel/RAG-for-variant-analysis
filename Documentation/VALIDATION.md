@@ -1,30 +1,44 @@
-# Validação da extração
+# Validation record
 
-Validação local em 11 de setembro de 2026, com Python 3.11.15:
+This file records checks that were actually executed. Planned checks are not reported as results.
 
-- 231 testes aprovados, incluindo 5 regressões de ingestão GROBID e 3 testes da
-  entrada independente de consulta por variante.
-- Pacote wheel gerado com sucesso por setuptools.
-- Importação de todos os módulos locais sem dependência de código externo ao projeto.
-- Ingestor importado com os imports de `fitz`, `pymupdf` e `langchain_community`
-  bloqueados, confirmando a remoção da dependência do parser alternativo.
-- Hashes dos 75 arquivos selecionados na origem permanecem iguais aos registrados
-  em `extraction_manifest.json`: o código original não foi alterado.
-
-Comando reproduzível após instalar as dependências:
+## Automated tests
 
 ```bash
 python -m pytest -q
 ```
 
-Os testes foram executados na cópia independente, usando as bibliotecas já
-instaladas no ambiente Python do projeto de origem. Não foi feita uma instalação
-completa das dependências em um ambiente novo durante esta validação local.
+The suite uses synthetic passages and mocks. It checks ingestion failure behavior, GROBID
+provenance, corpus-layer isolation, BM25 persistence, API contracts, citation validation,
+abstention, module independence, and RAGAS report handling. It does not measure biomedical quality.
 
-Os testes de serviço usam respostas sintéticas. Esta validação não executou
-GROBID, download de modelos, inferência Ollama ou avaliação científica no corpus real.
-O workflow GitHub Actions instala as dependências e executa a suíte em Python 3.11.
+Result on 12 September 2026: **105 passed** in the CPU-only development environment.
 
-Dois wrappers legados V6 (`finalize_task11_v6` e `preflight_task11_v6`) foram
-excluídos porque importavam funções já removidas na origem. Os comandos V7 foram
-preservados. A suíte inclui 64 verificações de importação dos módulos distribuídos.
+## Real BRAF smoke test
+
+The local smoke test uses the two open-access articles in `examples/braf/corpus.json`:
+
+1. verify or download publisher PDFs;
+2. extract TEI with GROBID, or load previously generated GROBID TEI;
+3. build BM25 and MedCPT/Qdrant indexes;
+4. retrieve and generate answers with Ollama;
+5. score saved answers with deterministic metrics and RAGAS.
+
+The complete CPU-only path was executed on 12 September 2026:
+
+- 2 open-access PLOS papers were represented by GROBID TEI artifacts;
+- 41 section-aware chunks were indexed with MedCPT and embedded Qdrant;
+- the expected colorectal cancer paper was ranked first for the 504-patient survival question;
+- the request completed in 48.96 seconds: 26.87 seconds retrieval and 22.07 seconds generation;
+- Qwen 2.5 1.5B abstained, so the transparent extractive fallback returned the exact E01 sentence
+  reporting overall survival of 14.0 versus 34.6 months (`p<0.001`);
+- deterministic expected-source recall and expected-status agreement were both 1.0;
+- a one-case local RAGAS run scored faithfulness 1.0 and context recall 1.0.
+
+The RAGAS values describe one engineering smoke test judged by the same small local model family.
+They are not estimates of clinical quality or broad-domain accuracy. The compact machine-readable
+record is in `examples/braf/real_smoke_test.json`; full generated outputs remain ignored by Git.
+
+The constrained WSL incident and mitigations are documented in
+[local runtime safety](LOCAL_RUNTIME_SAFETY.md). The successful final run used CPU execution and did
+not restart WSL.
