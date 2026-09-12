@@ -6,7 +6,7 @@ from types import SimpleNamespace
 import pytest
 from lxml import etree
 
-from src.rag import ingestor
+from healthrag.rag import ingestor
 
 
 @pytest.fixture
@@ -39,7 +39,7 @@ def test_successful_extraction_preserves_grobid_provenance(corpus, monkeypatch):
         return SimpleNamespace(status_code=200, content=content)
 
     monkeypatch.setattr(ingestor.requests, 'post', post)
-    docs = ingestor.load_pdfs_for_gene(root, 'BRAF', workers=1)
+    docs = ingestor.load_pdfs_for_collection(root, 'BRAF', workers=1)
     assert calls == ['http://localhost:8070/api/processFulltextDocument']
     assert docs and tei.exists()
     assert {d.metadata['parser'] for d in docs} == {'grobid_tei'}
@@ -52,7 +52,7 @@ def test_unhealthy_grobid_stops_ingestion(corpus, monkeypatch):
     monkeypatch.setattr(ingestor.requests, 'get', lambda *a, **k:
                         SimpleNamespace(status_code=503, text='unavailable'))
     with pytest.raises(RuntimeError, match='GROBID is unavailable'):
-        ingestor.load_pdfs_for_gene(corpus[0], 'BRAF')
+        ingestor.load_pdfs_for_collection(corpus[0], 'BRAF')
 
 
 def test_failed_pdf_extraction_propagates(corpus, monkeypatch):
@@ -63,7 +63,7 @@ def test_failed_pdf_extraction_propagates(corpus, monkeypatch):
     monkeypatch.setattr(ingestor.requests, 'post', lambda *a, **k:
                         SimpleNamespace(status_code=500, content=b'failed'))
     with pytest.raises(RuntimeError, match='GROBID failed.*HTTP 500'):
-        ingestor.load_pdfs_for_gene(root, 'BRAF', workers=1)
+        ingestor.load_pdfs_for_collection(root, 'BRAF', workers=1)
     assert not tei.exists()
 
 
@@ -71,7 +71,7 @@ def test_invalid_tei_propagates_parser_error(corpus, monkeypatch):
     corpus[2].write_text('<invalid')
     monkeypatch.setattr(ingestor, 'grobid_healthcheck', lambda *a: None)
     with pytest.raises(etree.XMLSyntaxError):
-        ingestor.load_pdfs_for_gene(corpus[0], 'BRAF', workers=1)
+        ingestor.load_pdfs_for_collection(corpus[0], 'BRAF', workers=1)
 
 
 def test_cached_tei_needs_no_grobid_and_abstracts_remain_separate(corpus, monkeypatch):
@@ -87,7 +87,7 @@ def test_cached_tei_needs_no_grobid_and_abstracts_remain_separate(corpus, monkey
 
     monkeypatch.setattr(ingestor.requests, 'get', forbidden)
     monkeypatch.setattr(ingestor.requests, 'post', forbidden)
-    docs = ingestor.load_cached_tei_for_gene(root, 'BRAF')
+    docs = ingestor.load_cached_tei_for_collection(root, 'BRAF')
     assert {d.metadata['parser'] for d in docs} == {'grobid_tei', 'pubmed_xml'}
     abstract_docs = [d for d in docs if d.metadata['parser'] == 'pubmed_xml']
     assert {d.metadata['pmid'] for d in abstract_docs} == {'456'}

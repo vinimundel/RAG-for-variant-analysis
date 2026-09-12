@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from src.literature.evidence_grade import ClaimEvidence, grade_claim
+from healthrag.literature.evidence_grade import ClaimEvidence, grade_claim
 
 BASE = {
     "claim_id": "c1", "variant": "V600E", "variant_directness": "exact_variant",
@@ -83,7 +83,7 @@ def test_reviews_alone_can_never_produce_literature_supported():
                                          ("C", "mechanistic_hypothesis"),
                                          ("D", "context")])
 def test_label_is_a_pure_function_of_the_grade(grade, label):
-    from src.literature.evidence_grade import LABEL_BY_GRADE
+    from healthrag.literature.evidence_grade import LABEL_BY_GRADE
     assert LABEL_BY_GRADE[grade] == label
 
 

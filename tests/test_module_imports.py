@@ -8,7 +8,7 @@ import pytest
 ROOT = Path(__file__).resolve().parents[1]
 MODULES = sorted(
     '.'.join(path.relative_to(ROOT).with_suffix('').parts)
-    for folder in ('src', 'pipeline')
+    for folder in ('healthrag',)
     for path in (ROOT / folder).rglob('*.py')
     if path.name != '__init__.py'
 )

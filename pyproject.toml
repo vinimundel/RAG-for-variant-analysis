@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rag-for-variant-analysis"
-version = "0.1.0"
-description = "Traceable literature retrieval and mechanistic annotation of protein variants"
+version = "0.2.0"
+description = "Local-first biomedical literature RAG with hybrid retrieval and verified citations"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -23,17 +23,29 @@ dependencies = [
     "qdrant-client>=1.11,<2",
     "rank-bm25>=0.2.2,<0.3",
     "lxml>=6.1.1,<7",
-    "matplotlib>=3.8,<4",
-    "seaborn>=0.13,<1",
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.30,<1",
 ]
 
+[project.scripts]
+healthrag = "healthrag.cli:main"
+
 [project.optional-dependencies]
-dev = ["pytest>=8,<10"]
+dev = ["pytest>=8,<10", "httpx>=0.27,<1"]
+eval = [
+    "ragas>=0.4,<0.5",
+    "openai>=1.80,<3",
+    # RAGAS 0.4.3 still imports the VertexAI compatibility module removed in 0.4.2.
+    "langchain-community>=0.4,<0.4.2",
+]
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["src*", "pipeline*"]
+include = ["healthrag*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.setuptools.package-data]
+"healthrag.rag" = ["profiles/*.json"]

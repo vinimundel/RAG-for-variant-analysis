@@ -1,0 +1,1 @@
+{"name":"braf_oncology","description":"BRAF customization for molecular oncology literature","retrieval_context":"BRAF oncology","answer_guidance":"Distinguish BRAF variant-specific evidence from pathway context. Preserve cancer type, experimental system and study limitations. Do not transfer mechanisms between variants."}

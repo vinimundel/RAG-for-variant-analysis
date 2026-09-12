@@ -1,6 +1,6 @@
 from langchain_core.documents import Document
 
-from src.rag.bm25_index import PersistentBM25, tokenize
+from healthrag.rag.bm25_index import PersistentBM25, tokenize
 
 
 def test_bm25_preserves_variant_tokens_and_roundtrips(tmp_path):

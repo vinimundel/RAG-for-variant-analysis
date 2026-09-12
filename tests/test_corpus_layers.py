@@ -4,10 +4,10 @@ from __future__ import annotations
 
 import pytest
 
-from src.literature.corpus_layers import (
+from healthrag.literature.corpus_layers import (
     assign_layer, build_corpus_layers, gene_link_status,
 )
-from src.literature.pubmed_records import PubMedRecord, parse_pubmed_articles
+from healthrag.literature.pubmed_records import PubMedRecord, parse_pubmed_articles
 
 BRAF_ALIASES = ["BRAF", "B-RAF", "P15056"]
 BRAF_MESH = ["Proto-Oncogene Proteins B-raf"]
